@@ -154,13 +154,11 @@ body {
   gap: 2rem;
   margin: 0 auto;
 }
-.img-two-rows {
-  height: 100%;
-  width: 100%;
+.about-img-hoch {
   grid-column: 1;
   grid-row: 2 span;
 }
-.img-one-rows {
+.about-img {
   height: 100%;
   width: 100%;
 }
