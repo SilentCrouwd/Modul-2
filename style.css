@@ -95,6 +95,7 @@ body {
 }
 
 /* Media Querries */
+
 @media only screen and (min-width: 600px) {
   .heroHeadline {
     font-size: 5rem;
@@ -126,5 +127,11 @@ body {
   }
   .navText {
     font-size: 1.3rem;
+  }
+}
+@media only screen and (max-height: 650px) {
+  .heroHeadline {
+    font-size: 4rem;
+    line-height: 4rem;
   }
 }
