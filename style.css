@@ -41,6 +41,7 @@ body {
   letter-spacing: 0.1rem;
 }
 .sectionBtn {
+  text-decoration: none;
   background-color: var(--secColor);
   font-family: inherit;
   color: var(--textColor);
