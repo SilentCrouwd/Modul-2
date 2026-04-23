@@ -33,6 +33,7 @@ body {
   font-size: 2rem;
   border-bottom: solid 1px var(--secColor);
   letter-spacing: 0.2rem;
+  text-transform: uppercase;
 }
 .section-paragraph {
   color: var(--textParagraph);
