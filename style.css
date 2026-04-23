@@ -9,8 +9,10 @@
 :root {
   --primaryColor: #04fff2;
   --textColor: #ffffff;
+  --textParagraph: #f3f3f3;
   --secColor: #0f9cfa;
   --boxSchadow: 10px 10px 6px 0px rgba(8, 216, 243, 0.75);
+  --bg-Color: #161616;
 }
 
 /* Placeholder */
@@ -20,40 +22,74 @@
 
 body {
   position: relative;
-  background-color: rgb(53, 51, 51);
+  background-color: var(--bg-Color);
   height: 100vh;
   font-family: "Playwrite NO", cursive;
 }
+
+/* Reusable */
+.section-headline {
+  color: var(--textColor);
+  font-size: 2rem;
+  border-bottom: solid 1px var(--secColor);
+  letter-spacing: 0.2rem;
+}
+.section-paragraph {
+  color: var(--textParagraph);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+.sectionBtn {
+  background-color: var(--secColor);
+  font-family: inherit;
+  color: var(--textColor);
+  border-radius: 5px;
+  border: solid 2px var(--secColor);
+  transition: background 0.5s ease-in-out;
+}
+.sectionBtn:hover {
+  background-color: transparent;
+}
+
+.sectionWrapper {
+  background-color: var(--bg-Color);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+/* Navbar und Header */
 .navBar {
-  height: 8vh;
+  height: 6rem;
   max-width: 100vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
 }
 .navItem {
   text-decoration: none;
   padding: 0.2rem;
 }
 .navText {
-  color: #ffffff;
+  color: var(--textColor);
   font-size: 0.9rem;
   text-transform: uppercase;
-  hyphens: auto;
+  transition: color 0.3s ease;
+  /* hyphens: auto; */
+  letter-spacing: 0.1rem;
 }
 
-.navItem:hover {
-  background-color: var(--secColor);
-
-  border-radius: 5px;
-  padding: 0.2rem;
+.navItem:hover .navText {
+  color: var(--secColor);
 }
+/* Hero Section */
 
 .heroWrapper {
   /* hier habe ich flex genommen weil es sonst einen tick zu groß wäre */
   display: flex;
   width: 100%;
-  height: 92vh;
+  height: calc(100vh - 6rem);
   background-color: black;
   background-image:
     linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -78,7 +114,7 @@ body {
   text-align: center;
 }
 .heroSecLine {
-  color: white;
+  color: var(--textParagraph);
   font-size: 1rem;
 }
 .heroCallToAction {
@@ -88,10 +124,41 @@ body {
   padding: 1rem;
   border-radius: 5px;
   border: solid 2px var(--secColor);
+  transition: background 0.5s ease-in-out;
 }
 .heroCallToAction:hover {
   background-color: transparent;
-  transition: all 0.5s ease;
+}
+
+/* Section about us */
+
+.section-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 2rem;
+  padding: 2rem;
+}
+.aboutUsbtn {
+  padding: 1rem;
+}
+.section-content-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+.img-two-rows {
+  height: 100%;
+  width: 100%;
+  grid-column: 1;
+  grid-row: 2 span;
+}
+.img-one-rows {
+  height: 100%;
+  width: 100%;
 }
 
 /* Media Querries */
@@ -128,10 +195,15 @@ body {
   .navText {
     font-size: 1.3rem;
   }
+  .sectionWrapper {
+    flex-direction: row;
+    max-width: 1000px;
+  }
 }
 @media only screen and (max-height: 650px) {
   .heroHeadline {
-    font-size: 4rem;
-    line-height: 4rem;
+    margin-top: 1rem;
+    font-size: 3rem;
+    line-height: 3rem;
   }
 }
