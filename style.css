@@ -48,10 +48,19 @@ body {
   color: var(--textColor);
   border-radius: 5px;
   border: solid 2px var(--secColor);
-  transition: background 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .sectionBtn:hover {
   background-color: transparent;
+  color: var(--secColor);
+}
+.invertiert {
+  background-color: transparent;
+  color: var(--secColor);
+}
+.invertiert:hover {
+  background-color: var(--secColor);
+  color: var(--textColor);
 }
 
 .sectionWrapper {
@@ -123,16 +132,7 @@ body {
   font-size: 1rem;
 }
 .heroCallToAction {
-  background-color: var(--secColor);
-  text-decoration: none;
-  color: var(--textColor);
   padding: 1rem;
-  border-radius: 5px;
-  border: solid 2px var(--secColor);
-  transition: background 0.5s ease-in-out;
-}
-.heroCallToAction:hover {
-  background-color: transparent;
 }
 
 /* Section about us */
@@ -198,6 +198,33 @@ body {
 .tage {
   color: var(--textParagraph);
 }
+
+.kontakt-container {
+  display: grid;
+  gap: 2rem;
+}
+.kontakt-content {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+.kontakt-content .section-headline {
+  width: fit-content;
+}
+.kontakt-content .sectionBtn {
+  padding: 1rem;
+}
+
+.kontakt-btn-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.kontakt-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 /* Media Querries */
 
 @media only screen and (min-width: 600px) {
@@ -223,6 +250,10 @@ body {
   }
   .opening-content {
     font-size: 1rem;
+  }
+  .kontakt-container {
+    column-gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
