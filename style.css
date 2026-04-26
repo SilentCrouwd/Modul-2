@@ -212,7 +212,8 @@ body {
   width: fit-content;
 }
 .kontakt-content .sectionBtn {
-  padding: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .kontakt-btn-container {
@@ -255,6 +256,10 @@ body {
     column-gap: 5rem;
     grid-template-columns: repeat(2, 1fr);
   }
+  .kontakt-content .sectionBtn {
+    font-size: 1rem;
+    padding: 0.5rem 0.1rem;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -283,6 +288,10 @@ body {
   }
   .opening-content {
     font-size: 1.3rem;
+  }
+  .kontakt-content .sectionBtn {
+    font-size: 1.3rem;
+    padding: 0.5rem 1.3rem;
   }
 }
 
