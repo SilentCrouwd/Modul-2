@@ -212,13 +212,13 @@ body {
   width: fit-content;
 }
 .kontakt-content .sectionBtn {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .kontakt-btn-container {
   display: flex;
   justify-content: space-around;
-  gap: 2rem;
+  gap: 1rem;
 }
 .kontakt-img {
   object-fit: cover;
