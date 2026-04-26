@@ -262,7 +262,7 @@ body {
 }
 @media only screen and (max-height: 650px) {
   .heroHeadline {
-    margin-top: 1rem;
+    margin-top: 3rem;
     font-size: 3rem;
     line-height: 3rem;
   }
