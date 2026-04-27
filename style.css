@@ -251,6 +251,39 @@ body {
   background-color: transparent;
 }
 
+/* Spisekarte */
+.speisekarten-wrapper {
+  height: 50vh;
+  background-image:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/Restaurant.png);
+}
+
+.speisekarten-header-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.menue-content-container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+.menue-headline {
+  width: fit-content;
+}
+.menue-img {
+  width: 50%;
+  grid-column: 1;
+  object-fit: cover;
+}
+.invertet {
+  flex-direction: row-reverse;
+}
+
 /* Media Querries */
 
 @media only screen and (min-width: 600px) {
