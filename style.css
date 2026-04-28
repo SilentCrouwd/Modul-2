@@ -95,6 +95,7 @@ body {
 }
 .nav-link {
   font-size: 1rem;
+  padding: 0.5rem;
 }
 .section-link:hover {
   color: var(--secColor);
@@ -294,6 +295,14 @@ body {
   padding: 0.2rem;
   font-size: 0.5rem;
   font-style: italic;
+}
+
+/* Impressum */
+.impressum-content-container,
+.datenschutz-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 /* Media Querries */
 
